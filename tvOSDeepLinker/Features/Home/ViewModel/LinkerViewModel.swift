@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class LinkerViewModel: ObservableObject {
+final class LinkerViewModel: ObservableObject {
     @Published var deeplinks: [Deeplink] = Deeplink.mocked
     @Published var selectedDeeplink: Deeplink = .init(urlString: "", type: .noType)
     @Published var showManual: Bool = false

@@ -17,8 +17,6 @@ enum DeeplinkType: String, CaseIterable {
 }
 
 struct Deeplink: Identifiable, Hashable {
-    
-    
     var id = UUID()
     var urlString: String
     var type: DeeplinkType

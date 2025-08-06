@@ -3,29 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC890D652C930294009EEFB7 /* tvOSDeepLinkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC890D642C930294009EEFB7 /* tvOSDeepLinkerApp.swift */; };
-		CC890D672C930294009EEFB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC890D662C930294009EEFB7 /* ContentView.swift */; };
-		CC890D692C930295009EEFB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC890D682C930295009EEFB7 /* Assets.xcassets */; };
 		CC890D6C2C930295009EEFB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC890D6B2C930295009EEFB7 /* Preview Assets.xcassets */; };
-		CC890D732C9302DA009EEFB7 /* LinkerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC890D722C9302DA009EEFB7 /* LinkerViewModel.swift */; };
-		CC890D752C9305C0009EEFB7 /* Deeplinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC890D742C9305C0009EEFB7 /* Deeplinks.swift */; };
-		CCC501562C930C3100940573 /* DeeplinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC501552C930C3100940573 /* DeeplinkList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC890D612C930294009EEFB7 /* tvOSDeepLinker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOSDeepLinker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC890D642C930294009EEFB7 /* tvOSDeepLinkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOSDeepLinkerApp.swift; sourceTree = "<group>"; };
-		CC890D662C930294009EEFB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CC890D682C930295009EEFB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC890D6B2C930295009EEFB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CC890D722C9302DA009EEFB7 /* LinkerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerViewModel.swift; sourceTree = "<group>"; };
-		CC890D742C9305C0009EEFB7 /* Deeplinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplinks.swift; sourceTree = "<group>"; };
-		CCC501552C930C3100940573 /* DeeplinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CC830C8B2E43C500005C2D12 /* AppDelegate */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppDelegate; sourceTree = "<group>"; };
+		CC830C8D2E43C512005C2D12 /* Features */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Features; sourceTree = "<group>"; };
+		CC830C912E43C554005C2D12 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC890D5E2C930294009EEFB7 /* Frameworks */ = {
@@ -57,13 +51,10 @@
 		CC890D632C930294009EEFB7 /* tvOSDeepLinker */ = {
 			isa = PBXGroup;
 			children = (
-				CC890D642C930294009EEFB7 /* tvOSDeepLinkerApp.swift */,
-				CC890D662C930294009EEFB7 /* ContentView.swift */,
-				CC890D682C930295009EEFB7 /* Assets.xcassets */,
+				CC830C8B2E43C500005C2D12 /* AppDelegate */,
+				CC830C8D2E43C512005C2D12 /* Features */,
 				CC890D6A2C930295009EEFB7 /* Preview Content */,
-				CC890D722C9302DA009EEFB7 /* LinkerViewModel.swift */,
-				CC890D742C9305C0009EEFB7 /* Deeplinks.swift */,
-				CCC501552C930C3100940573 /* DeeplinkList.swift */,
+				CC830C912E43C554005C2D12 /* Resources */,
 			);
 			path = tvOSDeepLinker;
 			sourceTree = "<group>";
@@ -91,6 +82,11 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				CC830C8B2E43C500005C2D12 /* AppDelegate */,
+				CC830C8D2E43C512005C2D12 /* Features */,
+				CC830C912E43C554005C2D12 /* Resources */,
+			);
 			name = tvOSDeepLinker;
 			productName = tvOSDeepLinker;
 			productReference = CC890D612C930294009EEFB7 /* tvOSDeepLinker.app */;
@@ -104,7 +100,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					CC890D602C930294009EEFB7 = {
 						CreatedOnToolsVersion = 15.4;
@@ -135,7 +131,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC890D6C2C930295009EEFB7 /* Preview Assets.xcassets in Resources */,
-				CC890D692C930295009EEFB7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,11 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC890D732C9302DA009EEFB7 /* LinkerViewModel.swift in Sources */,
-				CC890D752C9305C0009EEFB7 /* Deeplinks.swift in Sources */,
-				CC890D672C930294009EEFB7 /* ContentView.swift in Sources */,
-				CC890D652C930294009EEFB7 /* tvOSDeepLinkerApp.swift in Sources */,
-				CCC501562C930C3100940573 /* DeeplinkList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +182,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7A6QR7NGZZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -255,6 +246,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7A6QR7NGZZ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -284,7 +276,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tvOSDeepLinker/Preview Content\"";
-				DEVELOPMENT_TEAM = 7A6QR7NGZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,7 +290,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 16.0;
+				TVOS_DEPLOYMENT_TARGET = 17.6;
 			};
 			name = Debug;
 		};
@@ -311,7 +302,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tvOSDeepLinker/Preview Content\"";
-				DEVELOPMENT_TEAM = 7A6QR7NGZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -326,7 +316,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 16.0;
+				TVOS_DEPLOYMENT_TARGET = 17.6;
 			};
 			name = Release;
 		};

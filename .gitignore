@@ -1,62 +1,60 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+## --> OS X Finder
+.DS_Store
+.Trashes
+*.swp
 
-## User settings
-xcuserdata/
-
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
+## --> Build generated
+build/
+DerivedData
 .build/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+## --> Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+!default.xcworkspace
+profile
+*.xctimeline
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+## --> Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
 
-Carthage/Build/
+## --> Obj-C/Swift specific
+*.hmap
+*.ipa
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+##
 
+## --> Swift Package Manager
+##.build/
+
+## --> CocoaPods
+Pods/
+
+## --> Carthage
+##Carthage/
+
+## -- Infer
+infer-out/
+
+
+ruby
 fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+fastlane/test_output/report.html
+fastlane/test_output/report.junit
+EPIX.app.dSYM.zip
+node_modules
+EPIX NOW.app.dSYM.zip
+apollo-ios-cli
+/EPIX.xcodeproj/xcshareddata/xcschemes/MGM QA NotificationsService.xcscheme
+/EPIX.xcodeproj/xcshareddata/xcschemes/MGM NotificationsService.xcscheme
+.vscode/

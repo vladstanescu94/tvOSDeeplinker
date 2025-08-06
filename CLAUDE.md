@@ -93,3 +93,4 @@ The AI assistant is authorized to create and manage an "Agent Data" directory fo
 - **Purpose**: Store markdown files containing important discussions and decisions
 - **Usage**: Create files when user requests to save important conversations or architectural decisions
 - **Access**: Full read/write access to maintain project knowledge base
+- **Context Reference**: ALWAYS reference files in the Agent Data directory for additional context when working on tasks or answering questions about the project. This directory contains comprehensive analyses, architectural decisions, and workflow documentation that provide essential context for understanding the project structure and requirements.

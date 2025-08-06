@@ -9,36 +9,61 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = LinkerViewModel()
+    
     var body: some View {
-        VStack {
+        VStack(spacing: 25) {
             Text("Deeplinker")
-                .font(.largeTitle)
+                .font(.title)
+                .fontWeight(.bold)
             
-            NavigationLink("Select from list", value: "list")
-                .disabled(self.viewModel.showManual)
-            
-            VStack {
-                Toggle("Toggle manual", isOn: self.$viewModel.showManual)
+            VStack(spacing: 16) {
+                // List Selection Section
+                VStack(spacing: 8) {
+                    NavigationLink("Select from list", value: "list")
+                        .disabled(self.viewModel.showManual)
+                    
+                    // Show currently selected deeplink when in list mode
+                    if !self.viewModel.showManual && !self.viewModel.selectedDeeplink.urlString.isEmpty {
+                        VStack(spacing: 8) {
+                            Text("Selected:")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Text(self.viewModel.selectedDeeplink.urlString)
+                                .font(.footnote)
+                                .foregroundColor(.primary)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 6)
+                        }
+                    }
+                }
                 
-                if self.viewModel.showManual {
-                    TextField("Insert deeplink", text: $viewModel.manualLinkFieldValue)
+                // Manual Input Section
+                VStack(spacing: 12) {
+                    Toggle("Manual input mode", isOn: self.$viewModel.showManual)
+                    
+                    if self.viewModel.showManual {
+                        TextField("Insert deeplink", text: $viewModel.manualLinkFieldValue)
+                    }
                 }
             }
             
-            Button(action: {
+            // Trigger Button
+            Button("Trigger Deeplink") {
                 self.viewModel.openDeeplink()
-            }, label: {
-                Text("Trigger Deeplink")
-            })
+            }
+            .font(.title3)
+            .fontWeight(.semibold)
             
             Spacer()
         }
-        .padding()
+        .padding(40)
         .navigationDestination(for: String.self) { _ in
             DeeplinkList(viewModel: self.viewModel)
         }
     }
 }
+
 
 #Preview {
     HomeView()
